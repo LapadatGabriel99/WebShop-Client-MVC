@@ -11,7 +11,7 @@ namespace WebShop.MVC.Controllers
             _logger = logger;
         }
 
-        public IActionResult Register()
+        public IActionResult Index()
         {
             return View();
         }
