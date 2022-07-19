@@ -1,3 +1,80 @@
-﻿@{
+﻿@model RegisterViewModel
+@{
     ViewData["Title"] = "Register Page";
 }
+
+<div class="row">
+    <div class="col-md-6">
+        <h2 class="mt-4">Sign Up</h2>
+        <form class="row g-3 mt-3" asp-controller="Register" asp-action="Register" method="post" asp-antiforgery="true">
+            <div class="col-md-6 mb-2">
+                <label asp-for="Username" class="form-label mb-2">Username</label>
+                <input asp-for="Username" type="text" class="form-control"/>
+                <span asp-validation-for="Username" class="fs-6 fw-light text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-2">
+                <label asp-for="Email" class="form-label mb-2">Email</label>
+                <input asp-for="Email" type="text" class="form-control"/>
+                <span asp-validation-for="Email" class="fs-6 fw-light text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-2">
+                <label asp-for="Password" class="form-label mb-2">Password</label>
+                <input asp-for="Password" type="password" class="form-control"/>
+                <span asp-validation-for="Password" class="fs-6 fw-light text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-2">
+                <label asp-for="ConfirmPassword" class="form-label mb-2">Confirm Password</label>
+                <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="fs-6 fw-light text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-2">
+                <label asp-for="Firstname" class="form-label mb-2">First name</label>
+                <input asp-for="Firstname" type="text" class="form-control"/>
+                <span asp-validation-for="Firstname" class="fs-6 fw-light text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-2">
+                <label asp-for="Lastname" class="form-label mb-2">Last name</label>
+                <input asp-for="Lastname" type="text" class="form-control"/>
+                <span asp-validation-for="Lastname" class="fs-6 fw-light text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-2">
+                <label asp-for="PhoneNumber" class="form-label mb-2">Phone number</label>
+                <input asp-for="PhoneNumber" type="text" class="form-control"/>
+                <span asp-validation-for="PhoneNumber" class="fs-6 fw-light text-danger"></span>
+            </div>
+            <div class="col-6 mb-2">
+                <label asp-for="AddressFirstLine" class="form-label mb-2">Address 1</label>
+                <input asp-for="AddressFirstLine" type="text" class="form-control" placeholder="Street name & number..."/>
+                <span asp-validation-for="AddressFirstLine" class="fs-6 fw-light text-danger"></span>
+            </div>
+            <div class="col-6 mb-2">
+                <label asp-for="AddressSecondLine" class="form-label mb-2">Address 2</label>
+                <input asp-for="AddressSecondLine" type="text" class="form-control" placeholder="Building, floor, suite, apartment..."/>
+                <span asp-validation-for="AddressSecondLine" class="fs-6 fw-light text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-2">
+                <label asp-for="Country" class="form-label mb-2">Country</label>
+                <input asp-for="Country" type="text" class="form-control" />
+                <span asp-validation-for="Country" class="fs-6 fw-light text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-2">
+                <label asp-for="Region" class="form-label mb-2">Region</label>
+                <input asp-for="Region" type="text" class="form-control" />
+                <span asp-validation-for="Region" class="fs-6 fw-light text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-2">
+                <label asp-for="City" class="form-label mb-2">City</label>
+                <input asp-for="City" type="text" class="form-control" />
+                <span asp-validation-for="City" class="fs-6 fw-light text-danger"></span>
+            </div>
+            <div class="col-md-4 mb-2">
+                <label asp-for="ZipCode" class="form-label mb-2">Zip Code</label>
+                <input asp-for="ZipCode" type="text" class="form-control"/>
+                <span asp-validation-for="ZipCode" class="fs-6 fw-light text-danger"></span>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign up</button>
+            </div>
+        </form>
+    </div>
+</div>
